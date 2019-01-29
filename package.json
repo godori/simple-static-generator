@@ -1,0 +1,19 @@
+{
+  "name": "own-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-pages": "node ./build_scripts/builder.js",
+    "start": "concurrently --kill-others \"nodemon -e js,json,css,md -i build -x \\\"npm run build-pages\\\"\" \"live-server ./build\""
+  },
+  "author": "godori",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "fs-extra": "^7.0.1",
+    "live-server": "^1.2.1",
+    "markdown-it": "^8.4.2",
+    "nodemon": "^1.18.9"
+  }
+}
